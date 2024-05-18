@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "Tự động chuyển video Tiktok-GTL201",
+    "version": "1.0",
+    "description": "Một tiện ích mở rộng để theo dõi khi video TikTok kết thúc.",
+    "permissions": [
+      "activeTab",
+      "declarativeContent",
+      "storage" 
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.tiktok.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "./icons/joint.png",
+        "48": "./icons/gluten-free.png",
+        "128": "./icons/backboard.png"
+      }
+    },
+    "icons": {
+      "16": "./icons/joint.png",
+      "48": "./icons/gluten-free.png",
+      "128": "./icons/backboard.png"
+    },
+    "content_security_policy": {
+      "script-src": "self",
+      "object-src": "self"
+    }
+  }
+  

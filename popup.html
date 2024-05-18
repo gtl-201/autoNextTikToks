@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tự động chuyển video Tiktok</title>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            margin-right: 10px;
+        }
+        .switchContainer {
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            flex-direction: row;
+
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        .IMG{
+            height: 40px;
+        }
+        .link {
+            height: 40px;
+            width: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border: black;
+            border-width: 5px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .center{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .center2{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tiktok auto next Video</h1>
+    <p class="center">
+        Follow me on 
+        <div class="center2">
+            <a class="link" href="https://www.facebook.com/tieulongsivan/">
+                <img class="IMG" src="./icons/face.png" alt="facebook">
+            </a>
+
+            <a class="link" href="https://www.instagram.com/tieulongsivan/">
+                <img class="IMG" src="./icons/insta.png" alt="instagrom">
+            </a>
+
+            <a class="link" href="https://github.com/gtl-201">
+                <img class="IMG" src="./icons/git.png" alt="facebook">
+            </a>
+        </div>
+
+    </p>
+    <div class="switchContainer center2">
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider round"></span>
+        </label>
+        <p id="statusText">Is now OFF</p>
+    </div>
+    <p>@copyright: gtl-201(Invisible)</p>
+    <script src="popup.js"></script>
+</body>
+</html>
